@@ -1,8 +1,8 @@
 [run]
-source = project_name
+source = gw_cloud_ci
 
 [report]
 omit =
     */python?.?/*
     */site-packages/nose/*
-    project_name/__main__.py
+    gw_cloud_ci/__main__.py

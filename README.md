@@ -38,7 +38,7 @@ See also
 - ✅ Code linting using [flake8](https://flake8.pycqa.org/en/latest/)
 - 📊 Code coverage reports using [codecov](https://about.codecov.io/sign-up/)
 - 🛳️ Automatic release to [PyPI](https://pypi.org) using [twine](https://twine.readthedocs.io/en/latest/) and github actions.
-- 🎯 Entry points to execute your program using `python -m <project_name>` or `$ project_name` with basic CLI argument parsing.
+- 🎯 Entry points to execute your program using `python -m <gw_cloud_ci>` or `$ gw_cloud_ci` with basic CLI argument parsing.
 - 🔄 Continuous integration using [Github Actions](.github/workflows/) with jobs to lint, test and release your project on Linux, Mac and Windows environments.
 
 > Curious about architectural decisions on this template? read [ABOUT_THIS_TEMPLATE.md](ABOUT_THIS_TEMPLATE.md)  
@@ -49,51 +49,51 @@ See also
 <!--  DELETE THE LINES ABOVE THIS AND WRITE YOUR PROJECT README BELOW -->
 
 ---
-# project_name
+# gw_cloud_ci
 
-[![codecov](https://codecov.io/gh/author_name/project_urlname/branch/main/graph/badge.svg?token=project_urlname_token_here)](https://codecov.io/gh/author_name/project_urlname)
-[![CI](https://github.com/author_name/project_urlname/actions/workflows/main.yml/badge.svg)](https://github.com/author_name/project_urlname/actions/workflows/main.yml)
+[![codecov](https://codecov.io/gh/Mlh0801/gw-cloud-ci/branch/main/graph/badge.svg?token=gw-cloud-ci_token_here)](https://codecov.io/gh/Mlh0801/gw-cloud-ci)
+[![CI](https://github.com/Mlh0801/gw-cloud-ci/actions/workflows/main.yml/badge.svg)](https://github.com/Mlh0801/gw-cloud-ci/actions/workflows/main.yml)
 
-project_description
+Awesome gw_cloud_ci created by Mlh0801
 
 ## Install
 
 from source
 ```bash
-git clone https://github.com/author_name/project_urlname project_name
-cd project_name
+git clone https://github.com/Mlh0801/gw-cloud-ci gw_cloud_ci
+cd gw_cloud_ci
 make install
 ```
 
 from pypi
 
 ```bash
-pip install project_name
+pip install gw_cloud_ci
 ```
 
 ## Executing
 
 ```bash
-$ project_name run --port 8080
+$ gw_cloud_ci run --port 8080
 ```
 
 or
 
 ```bash
-python -m project_name run --port 8080
+python -m gw_cloud_ci run --port 8080
 ```
 
 or
 
 ```bash
-$ uvicorn project_name:app
+$ uvicorn gw_cloud_ci:app
 ```
 
 ## CLI
 
 ```bash
-❯ project_name --help
-Usage: project_name [OPTIONS] COMMAND [ARGS]...
+❯ gw_cloud_ci --help
+Usage: gw_cloud_ci [OPTIONS] COMMAND [ARGS]...
 
 Options:
   --install-completion [bash|zsh|fish|powershell|pwsh]
@@ -112,8 +112,8 @@ Commands:
 ### Creating a user
 
 ```bash
-❯ project_name create-user --help
-Usage: project_name create-user [OPTIONS] USERNAME PASSWORD
+❯ gw_cloud_ci create-user --help
+Usage: gw_cloud_ci create-user [OPTIONS] USERNAME PASSWORD
 
   Create user
 
@@ -129,7 +129,7 @@ Options:
 **IMPORTANT** To create an admin user on the first run:
 
 ```bash
-project_name create-user admin admin --superuser
+gw_cloud_ci create-user admin admin --superuser
 ```
 
 ### The Shell
@@ -137,7 +137,7 @@ project_name create-user admin admin --superuser
 You can enter an interactive shell with all the objects imported.
 
 ```bash
-❯ project_name shell       
+❯ gw_cloud_ci shell       
 Auto imports: ['app', 'settings', 'User', 'engine', 'cli', 'create_user', 'select', 'session', 'Content']
 
 In [1]: session.query(Content).all()
@@ -151,12 +151,12 @@ Out[3]: [Content(text='string', title='string', created_time='2021-09-14T19:25:0
 
 ## API
 
-Run with `project_name run` and access http://127.0.0.1:8000/docs
+Run with `gw_cloud_ci run` and access http://127.0.0.1:8000/docs
 
 ![](https://raw.githubusercontent.com/rochacbruno/fastapi-project-template/master/docs/api.png)
 
 
-**For some api calls you must authenticate** using the user created with `project_name create-user`.
+**For some api calls you must authenticate** using the user created with `gw_cloud_ci create-user`.
 
 ## Testing
 
@@ -189,18 +189,18 @@ tests/test_user_api.py::test_user_create PASSED                           [100%]
 ----------- coverage: platform linux, python 3.9.6-final-0 -----------
 Name                              Stmts   Miss  Cover
 -----------------------------------------------------
-project_name/__init__.py              4      0   100%
-project_name/app.py                  16      1    94%
-project_name/cli.py                  21      0   100%
-project_name/config.py                5      0   100%
-project_name/db.py                   10      0   100%
-project_name/models/__init__.py       0      0   100%
-project_name/models/content.py       47      1    98%
-project_name/routes/__init__.py      11      0   100%
-project_name/routes/content.py       52     25    52%
-project_name/routes/security.py      15      1    93%
-project_name/routes/user.py          52     26    50%
-project_name/security.py            103     12    88%
+gw_cloud_ci/__init__.py              4      0   100%
+gw_cloud_ci/app.py                  16      1    94%
+gw_cloud_ci/cli.py                  21      0   100%
+gw_cloud_ci/config.py                5      0   100%
+gw_cloud_ci/db.py                   10      0   100%
+gw_cloud_ci/models/__init__.py       0      0   100%
+gw_cloud_ci/models/content.py       47      1    98%
+gw_cloud_ci/routes/__init__.py      11      0   100%
+gw_cloud_ci/routes/content.py       52     25    52%
+gw_cloud_ci/routes/security.py      15      1    93%
+gw_cloud_ci/routes/user.py          52     26    50%
+gw_cloud_ci/security.py            103     12    88%
 -----------------------------------------------------
 TOTAL                               336     66    80%
 
@@ -222,7 +222,7 @@ make fmt   # formats the code
 This project uses [Dynaconf](https://dynaconf.com) to manage configuration.
 
 ```py
-from project_name.config import settings
+from gw_cloud_ci.config import settings
 ```
 
 ## Acessing variables
@@ -251,14 +251,14 @@ dynaconf_merge = true
 echo = true
 ```
 
-> `dynaconf_merge` is a boolean that tells if the settings should be merged with the default settings defined in project_name/default.toml.
+> `dynaconf_merge` is a boolean that tells if the settings should be merged with the default settings defined in gw_cloud_ci/default.toml.
 
 ### As environment variables
 ```bash
-export PROJECT_NAME_KEY=value
-export PROJECT_NAME_KEY="@int 42"
-export PROJECT_NAME_KEY="@jinja {{ this.db.uri }}"
-export PROJECT_NAME_DB__uri="@jinja {{ this.db.uri | replace('db', 'data') }}"
+export gw_cloud_ci_KEY=value
+export gw_cloud_ci_KEY="@int 42"
+export gw_cloud_ci_KEY="@jinja {{ this.db.uri }}"
+export gw_cloud_ci_DB__uri="@jinja {{ this.db.uri | replace('db', 'data') }}"
 ```
 
 ### Secrets
@@ -272,7 +272,7 @@ can read those variables.
 ### Switching environments
 
 ```bash
-PROJECT_NAME_ENV=production project_name run
+gw_cloud_ci_ENV=production gw_cloud_ci run
 ```
 
 Read more on https://dynaconf.com

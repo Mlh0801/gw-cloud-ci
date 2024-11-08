@@ -23,18 +23,18 @@ def read(*paths, **kwargs):
 
 
 description = """
-project_name API helps you do awesome stuff. 🚀
+gw_cloud_ci API helps you do awesome stuff. 🚀
 """
 
 app = FastAPI(
-    title="project_name",
+    title="gw_cloud_ci",
     description=description,
     version=read("VERSION"),
-    terms_of_service="http://project_name.com/terms/",
+    terms_of_service="http://gw_cloud_ci.com/terms/",
     contact={
-        "name": "author_name",
-        "url": "http://project_name.com/contact/",
-        "email": "author_name@project_name.com",
+        "name": "Mlh0801",
+        "url": "http://gw_cloud_ci.com/contact/",
+        "email": "Mlh0801@gw_cloud_ci.com",
     },
     license_info={
         "name": "The Unlicense",
